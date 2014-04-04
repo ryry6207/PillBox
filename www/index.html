@@ -11,25 +11,22 @@
 	
 </head> 
 <body> 
-
 <div data-role="page">
 
-	<div data-role="header" data-theme="b">
+	<div data-role="header" data-theme="b" data-position="fixed">
 		<h1>Setup</h1>
 	</div><!-- /header -->
 
 	<div data-role="content">	
 		<p>Enter Details Below to Get Started</p>		
-	</div><!-- /content -->
+        
     <label><input type="checkbox" name="checkbox-0" /> Male </label>
 			<input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" />
             <label for="checkbox-1">Female</label> 
       <p> 
-    <form action="form.php" method="post"></form>
    			<label for="name" class="ui-hidden-accessible">Name:</label>
 			<input type="text" name="name" id="name" value="" placeholder="Name"/>
       <p>
-    <form action="form.php" method="post"></form>
     		<label for="surname" class="ui-hidden-accessible">Surname:</label>
 			<input type="text" name="surname" id="surname" value="" placeholder="Surname"/> 
       <p>
@@ -37,8 +34,11 @@
 			<input type="text" name="email" id="email" value="" placeholder="E-mail Address"/> 
       <p>
      <label for="dob" class="ui-hidden-accessible">Date of Birth:</label>
-			<input type="date" name="dob" id="dob" value="" placeholder="dob"/>
-      
+			<input type="date" name="dob" id="dob" value="" placeholder="Date of Birth"/>
+      <p>
+      <p>
+      <input type="submit" value="Submit" /> 
+       
         </div>   
     </body>
     </html>     
