@@ -18,15 +18,20 @@
 	</div><!-- /header -->
 
 	<div data-role="content">	
-		<h4>Enter Your Details Below to Get Started</h4>		
+		<p>Enter Your Details Below to Get Started</p>		
         
-    		<label for="select-choice-0" class="select">Gender</label>
-			<select name="select-choice-0" id="select-choice-0">
-   			<option value="Male">Male</option>
-   			<option value="Female">Female</option>
-            <option value="Prefer Not to Say">Prefer Not to Say</option>
-  
-			</select>
+    		<fieldset data-role="gender">
+		<legend>Gender:</legend>
+     	<input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked" />
+     	<label for="radio-choice-1">Male</label>
+
+     	<input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2"  />
+     	<label for="radio-choice-2">Female</label>
+
+     	<input type="radio" name="radio-choice" id="radio-choice-3" value="choice-3"  />
+     	<label for="radio-choice-3">Prefer Not to Say</label>
+
+			</fieldset>	
       <p> 
    	  		<label for="name" class="ui-hidden-accessible">Name:</label>
 			<input type="text" name="name" id="name" value="" placeholder="Name"/>
