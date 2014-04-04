@@ -2,7 +2,7 @@
 <html> 
 	<head> 
 	<title>Pill Box</title> 
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0-rc.2/jquery.mobile-1.1.0-rc.2.min.css" />
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.1.0-rc.2/jquery.mobile-1.1.0-rc.2.min.js"></script>
@@ -18,28 +18,32 @@
 	</div><!-- /header -->
 
 	<div data-role="content">	
-		<p>Enter Details Below to Get Started</p>		
+		<h4>Enter Your Details Below to Get Started</h4>		
         
-    <label><input type="checkbox" name="checkbox-0" /> Male </label>
-			<input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" />
-            <label for="checkbox-1">Female</label> 
+    		<label for="select-choice-0" class="select">Gender</label>
+			<select name="select-choice-0" id="select-choice-0">
+   			<option value="Male">Male</option>
+   			<option value="Female">Female</option>
+            <option value="Prefer Not to Say">Prefer Not to Say</option>
+  
+			</select>
       <p> 
-   			<label for="name" class="ui-hidden-accessible">Name:</label>
+   	  		<label for="name" class="ui-hidden-accessible">Name:</label>
 			<input type="text" name="name" id="name" value="" placeholder="Name"/>
       <p>
     		<label for="surname" class="ui-hidden-accessible">Surname:</label>
 			<input type="text" name="surname" id="surname" value="" placeholder="Surname"/> 
       <p>
-     <label for="email" class="ui-hidden-accessible">E-mail Address:</label>
+     		<label for="email" class="ui-hidden-accessible">E-mail Address:</label>
 			<input type="text" name="email" id="email" value="" placeholder="E-mail Address"/> 
       <p>
-     <label for="dob" class="ui-hidden-accessible">Date of Birth:</label>
+     		<label for="dob" class="ui-hidden-accessible">Date of Birth:</label>
 			<input type="date" name="dob" id="dob" value="" placeholder="Date of Birth"/>
+      <p>	
       <p>
-      <p>
-      <input type="submit" value="Submit" /> 
+      		<input type="submit" value="Submit" /> 
        
-        </div>   
+</div>   
     </body>
     </html>     
       
