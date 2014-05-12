@@ -8,7 +8,8 @@
 	<script src="http://code.jquery.com/mobile/1.1.0-rc.2/jquery.mobile-1.1.0-rc.2.min.js"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-	
+    <script src="js/main.js"></script> 
+    
 </head> 
 <body> 
 <div data-role="page">
@@ -20,7 +21,7 @@
 	<div data-role="content">	
 		<p>Enter Your Details Below to Get Started</p>		
         
-    		<fieldset data-role="gender">
+    		<fieldset data-role="content">
 		<legend>Gender:</legend>
      	<input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked" />
      	<label for="radio-choice-1">Male</label>
@@ -45,11 +46,17 @@
      		<label for="dob" class="ui-hidden-accessible">Date of Birth:</label>
 			<input type="date" name="dob" id="dob" value="" placeholder="Date of Birth"/>
       <p>	
-      <p>
-      		<input type="submit" value="Submit" /> 
-       
-</div>   
-    </body>
+      <p> 
+      <div role="main" class="ui-content">
+    	<form action="pages/setup.html" method="get">
+      	<input type="submit" value="Submit" onClick="onSubmit()"/>	
+    	</form>
+ 	 </div>
+      		
+      
+ 
+      
+</body>
     </html>     
       
 </div><!-- /page -->
