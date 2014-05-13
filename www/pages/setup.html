@@ -1,26 +1,51 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Untitled Document</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>Pill Box</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0-rc.2/jquery.mobile-1.1.0-rc.2.min.css" />
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.1.0-rc.2/jquery.mobile-1.1.0-rc.2.min.js"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="js/main.js"></script> 
-</head>
+    <script src="../js/main.js"></script>
+    
+    
+</head> 
+<body> 
+<div data-role="page">
 
-<body>
-<div data-role="page" id="setup">
-  <div data-role="header">
-    <h1>Header</h1>
-  </div>
-  <div data-role="content">Content</div>
-  <div data-role="footer">
-    <h4>Footer</h4>
-  </div>
-</div>
+	<div data-role="header" data-theme="b" data-position="fixed">
+		<h1>Tablet Details</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<p>Enter the Details About Your Medication Below</p>		
+
+      <p> 
+   	  		<label for="name" class="ui-hidden-accessible">Tablet Name:</label>
+			<input type="text" name="name" id="name" value="" placeholder="Tablet Name"/>
+      <p>
+    		<label for="dosage">Tablet Dosage:</label>
+			<input type="range" name="dosage" id="dosage" value="0" min="0" max="10" />
+      <p>
+     		<label for="time" class="ui-hidden-accessible">Time Taken:</label>
+			<input type="time" name="time" id="time" value="" placeholder="Time Taken"/> 
+      <p>
+     		<label for="repeat" class="ui-hidden-accessible">Repeat Time:</label>
+			<input type="time" name="repeat" id="repeat" value="" placeholder="Tablet Repeat Time"/>
+      <p> 
+      <div role="main" class="ui-content">
+    	<form action="pillbox.html" method="get">
+      	<input type="submit" value="Submit" onClick="onSubmit2()"/>	
+    	</form>
+ 	 </div>
+
+      
+</body>
+    </html>     
+      
+</div><!-- /page -->
+	
 </body>
 </html>
