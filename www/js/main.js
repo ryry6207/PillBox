@@ -75,7 +75,7 @@ function onSqlError(tx, err) {
 	theDB.transaction(function (tx) {
 		
 		
-		var sqlStr = 'CREATE TABLE IF NOT EXISTS pillbox (name TEXT, dosage TEXT, time TEXT, repeat TEXT)';
+		var sqlStr = 'CREATE TABLE IF NOT EXISTS pillbox1 (name TEXT, dosage TEXT, time TEXT, repeat TEXT)';
 			console.log(sqlStr);
 			tx.executeSql(sqlStr, [], onSqlSuccess, onSqlError);
 	 
@@ -90,7 +90,7 @@ function onSqlError(tx, err) {
 			
 			console.log(name);
 			
-			var sqlStr = 'INSERT INTO pillbox (name, dosage, time, repeat) VALUES (?, ?, ?, ?)';
+			var sqlStr = 'INSERT INTO pillbox1 (name, dosage, time, repeat) VALUES (?, ?, ?, ?)';
 			tx.executeSql(sqlStr, [name, dosage, time, repeat]);
 		});
  }
@@ -120,4 +120,14 @@ function onSqlError(tx, err) {
 		
 		console.log(err.message);
 		alert("Error: "  + err.message);
+}
+
+//Selecting From Database
+function onTxSucess (){
+	tx.executeSql('SELECT * FROM pillbox1', [], function (tx, results) {
+  		var len = results.rows.length, i;
+  		for (i = 0; i < len; i++) {
+   		alert(results.rows.item(i).text);
+  }
+});
 }
