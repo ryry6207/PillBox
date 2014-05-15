@@ -9,43 +9,46 @@
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="../js/main.js"></script>
-    
-    
+       
 </head> 
 <body> 
 <div data-role="page">
 
 	<div data-role="header" data-theme="b" data-position="fixed">
 		<h1>Tablet Details</h1>
-	</div><!-- /header -->
+	</div>
+    <!-- /header -->
 
 	<div data-role="content">	
 		<p>Enter the Details About Your Medication Below</p>		
 
       <p> 
+      		<!--Tablet Name Entry-->
    	  		<label for="name" class="ui-hidden-accessible">Tablet Name:</label>
 			<input type="text" name="name" id="name" value="" placeholder="Tablet Name"/>
       <p>
+      		<!--Tablet Dosage Entry-->
     		<label for="dosage">Tablet Dosage:</label>
 			<input type="range" name="dosage" id="dosage" value="0" min="0" max="10" />
       <p>
+      		<!--Time Taken Entry-->
      		<label for="time" class="ui-hidden-accessible">Time Taken:</label>
 			<input type="time" name="time" id="time" value="" placeholder="Time Taken"/> 
       <p>
+      		<!--Tablet Repeat Entry-->
      		<label for="repeat" class="ui-hidden-accessible">Repeat Time:</label>
 			<input type="time" name="repeat" id="repeat" value="" placeholder="Tablet Repeat Time"/>
-      <p> 
+      <p>
+      <!--Submit Form Button--> 
       <div role="main" class="ui-content">
     	<form action="pillbox.html" method="get">
       	<input type="submit" value="Submit" onClick="onSubmit2()"/>	
     	</form>
  	 </div>
-
-      
+     
 </body>
     </html>     
       
-</div><!-- /page -->
-	
+</div>	
 </body>
 </html>

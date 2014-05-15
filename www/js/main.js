@@ -2,8 +2,6 @@
 
  function onSubmit(){
 	
-	alert ("onSubmit called");
-	
 	//open database
 	var theDB = openDatabase("pbdb3", "1.0", "pill box", 3 * 1024 * 1024);
 	
@@ -14,9 +12,7 @@
 		var sqlStr = 'CREATE TABLE IF NOT EXISTS pillbox (male TEXT, female TEXT, none TEXT, name TEXT, surname TEXT, email TEXT, dob TEXT)';
 			console.log(sqlStr);
 			tx.executeSql(sqlStr, [], onSqlSuccess, onSqlError);
-	 
-		 
-			alert("writng data");
+	
 	
 			var id= 1;
 			var male=$('#radio-choice-1').val();
@@ -37,6 +33,7 @@
  function onTxError(tx, err){
 	var msgText;
 	if(err){
+		
 	//Tell the user what happened
 		msgText = "TX: " + err.message + " (" + err .code +")";
 	}
@@ -44,7 +41,6 @@
 		msgText = "TX: Unknown error";
 	}
 	console.error(msgText);
-	alert(msgText);
 }
 		
 function onTxSucess(tx, msg){
@@ -52,7 +48,6 @@ function onTxSucess(tx, msg){
 		}
 		
 function onSqlSuccess(tx, res) {
-	alert("success");
 }
 
 function onSqlError(tx, err) {
@@ -66,8 +61,6 @@ function onSqlError(tx, err) {
 
  function onSubmit2(){
 	
-	alert ("onSubmit2 called");
-	
 	//open database
 	var theDB = openDatabase("pbdb4", "1.0", "pill box", 3 * 1024 * 1024);
 	
@@ -79,8 +72,6 @@ function onSqlError(tx, err) {
 			console.log(sqlStr);
 			tx.executeSql(sqlStr, [], onSqlSuccess, onSqlError);
 	 
-		 
-			alert("writng data");
 	
 			var id= 1;
 			var name=$('#name').val();
@@ -98,14 +89,13 @@ function onSqlError(tx, err) {
  function onTxError(tx, err){
 	var msgText;
 	if(err){
-	//Tell the user what happened
+//Tell the user what happened
 		msgText = "TX: " + err.message + " (" + err .code +")";
 	}
 	else{
 		msgText = "TX: Unknown error";
 	}
 	console.error(msgText);
-	alert(msgText);
 }
 		
 function onTxSucess(tx, msg){
@@ -113,7 +103,6 @@ function onTxSucess(tx, msg){
 		}
 		
 function onSqlSuccess(tx, res) {
-	alert("success");
 }
 
 function onSqlError(tx, err) {
@@ -122,12 +111,6 @@ function onSqlError(tx, err) {
 		alert("Error: "  + err.message);
 }
 
-//Selecting From Database
-function onTxSucess (){
-	tx.executeSql('SELECT * FROM pillbox1', [], function (tx, results) {
-  		var len = results.rows.length, i;
-  		for (i = 0; i < len; i++) {
-   		alert(results.rows.item(i).text);
-  }
-});
-}
+
+
+	

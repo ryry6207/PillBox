@@ -16,12 +16,14 @@
 
 	<div data-role="header" data-theme="b" data-position="fixed">
 		<h1>Setup</h1>
-	</div><!-- /header -->
+	</div>
+    <!-- /header -->
 
 	<div data-role="content">	
 		<p>Enter Your Details Below to Get Started</p>		
         
-    		<fieldset data-role="content">
+        <!--Start of Gender Selection-->
+    	<fieldset data-role="content" data-mini="true">
 		<legend>Gender:</legend>
      	<input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked" />
      	<label for="radio-choice-1">Male</label>
@@ -33,33 +35,35 @@
      	<label for="radio-choice-3">Prefer Not to Say</label>
 
 			</fieldset>	
+        <!--End of Gender Selection-->
       <p> 
+      		<!--Name Entry-->
    	  		<label for="name" class="ui-hidden-accessible">Name:</label>
 			<input type="text" name="name" id="name" value="" placeholder="Name"/>
       <p>
+      		<!--Surname Entry-->
     		<label for="surname" class="ui-hidden-accessible">Surname:</label>
 			<input type="text" name="surname" id="surname" value="" placeholder="Surname"/> 
       <p>
+      		<!--Email Entry-->
      		<label for="email" class="ui-hidden-accessible">E-mail Address:</label>
 			<input type="text" name="email" id="email" value="" placeholder="E-mail Address"/> 
       <p>
+     	 	<!--Date of Birth Entry-->
      		<label for="dob" class="ui-hidden-accessible">Date of Birth:</label>
 			<input type="date" name="dob" id="dob" value="" placeholder="Date of Birth"/>
       <p>	
       <p> 
+      <!--Submit Button-->
       <div role="main" class="ui-content">
     	<form action="pages/setup.html" method="get">
       	<input type="submit" value="Submit" onClick="onSubmit()"/>	
     	</form>
  	 </div>
-      		
-      
- 
-      
+      		    
 </body>
     </html>     
       
-</div><!-- /page -->
-	
+</div>
 </body>
 </html>
